@@ -5,9 +5,9 @@ This repository contains two group assignments from an econometrics course focus
 /data: Input datasets (Data_for_HW1.xlsx, Data HW2.xlsx) containing Bitcoin prices and S&P 500 price/dividend indices.
 
 /scripts: Python scripts or Jupyter notebooks for each assignment:
-Econometrics_Group_Homework_1.ipynb: Bitcoin price and log return analysis.
+HW1.ipynb: Bitcoin price and log return analysis.
 
-Econometrics_Group_Homework_2.ipynb: S&P 500 price and dividend index analysis.
+HW2.ipynb: S&P 500 price and dividend index analysis.
 
 ## Assignment Details
 ### Homework 1: Bitcoin Price and Log Returns
@@ -67,8 +67,6 @@ Install dependencies:
 bash
 
 pip install -r requirements.txt
-
-(Create a requirements.txt with: pandas, numpy, statsmodels, arch, matplotlib, seaborn, plotly, scipy, openpyxl.)
 
 Run the notebooks in /scripts to reproduce the analysis.
 
