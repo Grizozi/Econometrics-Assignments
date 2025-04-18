@@ -9,10 +9,6 @@ Econometrics_Group_Homework_1.ipynb: Bitcoin price and log return analysis.
 
 Econometrics_Group_Homework_2.ipynb: S&P 500 price and dividend index analysis.
 
-/results: Output files, including plots (e.g., correlograms, volatility forecasts) and summary tables.
-
-/docs: Assignment descriptions or reports (if available).
-
 ## Assignment Details
 ### Homework 1: Bitcoin Price and Log Returns
 Objective: Analyze Bitcoin price index and log returns from November 2020 to December 2024.
