@@ -1,63 +1,63 @@
 # Time Series Econometrics Assignments
+
 ## Overview
-This repository contains two group assignments from an econometrics course focused on time series analysis. The assignments analyze financial time series data (Bitcoin prices and S&P 500 indices) to model mean and volatility, assess stationarity, and evaluate model performance. The work demonstrates proficiency in applying econometric techniques such as ARIMA, GARCH, and unit root tests, using Python for data analysis and visualization.
+This repository contains three group assignments from an econometrics course focused on time series analysis. The assignments analyze financial time series data (Bitcoin prices, S&P 500 indices, and Pfizer stock prices) to model mean and volatility, assess stationarity, and evaluate model performance. The work demonstrates proficiency in applying econometric techniques such as ARIMA, GARCH, EGARCH, APARCH, unit root tests, and machine learning, using Python for data analysis and visualization.
+
 ## Repository Structure
-/data: Input datasets (Data_for_HW1.xlsx, Data HW2.xlsx) containing Bitcoin prices and S&P 500 price/dividend indices.
+/data: Input datasets (Data_for_HW1.xlsx, Data HW2.xlsx, PFE data via Yahoo Finance).
 
-/scripts: Python scripts or Jupyter notebooks for each assignment:
-HW1.ipynb: Bitcoin price and log return analysis.
-
-HW2.ipynb: S&P 500 price and dividend index analysis.
+/scripts: Python notebooks for each assignment:
+- HW1.ipynb: Bitcoin price and log return analysis.
+- HW2.ipynb: S&P 500 price and dividend index analysis.
+- HW3_Class17_Group11.ipynb: Pfizer (PFE) stock time series modeling and ML forecasting.
 
 ## Assignment Details
+
 ### Homework 1: Bitcoin Price and Log Returns
 Objective: Analyze Bitcoin price index and log returns from November 2020 to December 2024.
 
-Tasks:
-Plot correlograms (ACF/PACF) to assess stationarity of Bitcoin prices (non-stationary) and log returns (stationary).
-
-Compute summary statistics and histograms, confirming non-normality of log returns (Jarque-Bera test).
-
-Model log returns using Constant Expected Return (CER) and ARMA models, finding CER as the best fit (lowest AIC/BIC).
-
-Analyze residuals, confirming white noise behavior but non-normal distribution.
-
-Key Findings:
-Bitcoin prices exhibit random walk behavior, requiring log return transformation for stationarity.
-
-Log returns resemble a white noise process with no significant autocorrelation.
-
-Non-normality suggests potential for GARCH modeling in future analyses.
+Key Tasks:
+- Plot correlograms (ACF/PACF) to assess stationarity.
+- Compute summary statistics and conduct Jarque-Bera test.
+- Fit ARMA and CER models.
+- Perform residual diagnostics.
 
 ### Homework 2: S&P 500 Price and Dividend Indices
 Objective: Analyze S&P 500 price and dividend indices, focusing on stationarity, cointegration, and volatility.
 
-Tasks:
-Conduct unit root tests (ADF, PP, KPSS) on price and dividend indices, confirming both are I(1).
+Key Tasks:
+- Unit root tests (ADF, PP, KPSS).
+- OLS regression and cointegration analysis.
+- Model log returns using ARMA and EGARCH.
+- Evaluate model performance using BIC and residual tests.
 
-Perform OLS regression of price on dividend index, detecting cointegration despite residual autocorrelation.
+### Homework 3: PFE Stock Time Series and Forecasting
+Objective: Model Pfizer (PFE) stock prices and returns to evaluate mean and volatility structures, and compare traditional econometric models to machine learning forecasts.
 
-Model S&P 500 log returns using ARMA(0,1) and EGARCH(1,1)/EGARCH(2,2) for volatility clustering.
-
-Evaluate model performance using residual analysis and information criteria (BIC).
+Key Tasks:
+- Conduct visual and statistical stationarity analysis.
+- Fit ARMA models for returns and assess model fit.
+- Estimate EGARCH and APARCH models for volatility.
+- Compare volatility models using AIC and auxiliary regressions.
+- Perform out-of-sample forecasts using both econometric and ML models (e.g., XGBoost or Random Forest).
+- Evaluate predictive performance using MSFE and visualization.
 
 Key Findings:
-Price and dividend indices are non-stationary but cointegrated, indicating a long-run relationship.
-
-Log returns exhibit volatility clustering and leptokurticity, well-captured by EGARCH(2,2), which outperforms EGARCH(1,1).
-
-EGARCH(2,2) provides an unbiased and efficient predictor of variance (F-test p-value: 0.833).
+- PFE returns are stationary, enabling ARMA modeling.
+- EGARCH and APARCH models capture volatility clustering.
+- ML models can rival econometric models depending on feature engineering and validation.
 
 ## Tools and Technologies
 Programming Language: Python
 
-Libraries: pandas, numpy, statsmodels, arch, matplotlib, seaborn, plotly, scipy
+Libraries: pandas, numpy, statsmodels, arch, matplotlib, seaborn, plotly, scipy, openpyxl, yfinance, scikit-learn, xgboost
 
 Environment: Jupyter Notebooks
 
-Data Sources: Provided datasets (Bitcoin prices, S&P 500 indices)
+Data Sources: Provided datasets and Yahoo Finance (PFE stock)
 
 ## How to Use
+
 Clone the repository:
 bash
 
