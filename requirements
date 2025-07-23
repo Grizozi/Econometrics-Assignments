@@ -7,3 +7,6 @@ seaborn
 plotly
 scipy
 openpyxl
+yfinance
+scikit-learn
+xgboost
